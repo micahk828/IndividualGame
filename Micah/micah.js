@@ -65,3 +65,4 @@ function Ninjas(name, age, height, color){
   };
 }
 
+//js3.png
