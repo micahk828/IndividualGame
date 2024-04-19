@@ -37,7 +37,8 @@ function Ninjas(nmae, age, height, color) {
     //audio
     coinSfx.play();
 
-
+const promptUser = () => {
+  let name = propmpt('Pick a anme:') || 
 
 
 
