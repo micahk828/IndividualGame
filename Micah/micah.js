@@ -95,6 +95,64 @@ const promptUser = () => {
   this.getColor = () => {
     color = prompt('Choose color: Red Blue Green') || 'red';
     color = color.toLowerCase();
-    if (color === 'red' || color === 'blue'
-  }
-}
+    if (color === 'red' || color === 'blue' || color === 'green') {
+      return;
+    } else {
+      this.getColor();
+    }
+  };
+
+  this.appendImg = () => {
+    img = document.createElement('img');
+    let size = 'width:' + height + 'px;height:' + height + 'px;';
+    if (color === 'blue') {
+      img.setAttribute('src', 'img/ninja1.png');
+      img.setAttribute('style', size);
+      container.appendChild(img);
+    } else if (color === 'green') {
+      img.setAttribute('src', 'img/ninja2.png');
+      img.setAttribute('style', size);
+      container.appendChild(img);
+    } else if (color === 'red') {
+      img.setAttribute('src', 'img/ninja3.png');
+      img.setAttribute('style', size);
+      container.appendChild(img);
+    }
+  };
+
+  this.changeBtns = () => {
+    const btn = document.querySelector('button');
+    const btnContainer = document.querySelector('.btns-container');
+    btnContainer.removeChild(btn);
+    btnContainer.innerHTML =
+      "<button onclick='ninja.coin()' id='btnCoin'>Coin</button onclick='ninja.pipe()' id='btnPipe'>Pipe</button> \n <button onclick='ninja.powerUp()' id='btnPowerUp'>Power Up</button>";
+    const newBtns = document.querySelectorAll('button');
+    for (let i = 0; i < newBtns.length; i++) {
+      newBtns[i].style.setProperty('margin-left', '1.5rem');
+    }
+
+    // Add floor
+    const floor = document.createElement('div');
+    floor.setAttribute('class', 'floor');
+    container.appendChild(floor);
+    floor.innerHTML =
+      'Name: ' +
+      ninja.name +
+      '\xa0\xa0\xa0Age: ' +
+      ninja.age +
+      '\xa0\xa0\xa0Height: ' +
+      ninja.height +
+      'px' +
+      '\xa0\xa0\xa0Color: ' +
+      ninja.color;
+  };
+
+  this.getAge();
+  this.getHeight();
+  this.getColor();
+
+  ninja = new Ninjas(name, age, height, color);
+
+  this.appendImg();
+  this.changeBtns();
+};
