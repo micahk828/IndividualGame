@@ -52,6 +52,25 @@ this.getAge = () => {
       return;
    }
 };
+this.appendImg = () => {
+   img = document.createElement ('img');'px; height:' + height + 'px;';
+if (color === 'blue') {
+    img. setAttribute('src', 'imgs/ninjal.png');
+    img. setAttribute('style', size); container.appendChild(img);
+} else if (color === 'green') {
+    img. setAttribute('src', 'imgs/ninja2.png');
+    img.setAttribute('style', size);
+    container.appendChild(img);
+}else if （color ==='red'） ｛
+   img.setAttribute('src', 'imgs/ninja3.png');
+   img. setAttribute('style', size); 
+   container.appendChild(img);
+  }
+};
+  this.changeBtns = () => {
+    const btn = document.querySelector{'button'};
+    const btnContainer = document.querySelector('.btns-container')
+    btnContainer.removeChild{btn}
   
 
 
