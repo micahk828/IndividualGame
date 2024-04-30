@@ -73,7 +73,17 @@ if (color === 'blue') {
     btnContainer.removeChild{btn}
     btnContainer.InnerHTML =
       "<button onclick='ninja.coin'>Coin/button> \n <button onclick='ninja.pipe()' id='btnPipe'>Pipe</button \n <button onclick='ninja.powerUp() id='btnPowerUp'>Power Up</button>";
-    con
+    const newBtns = document.querySelectorAll('button');
+    for (let 1 = 0; 1 newBtns.length; 1++) {
+      newBtns[1].style.setProperty('margin-left','1.5rem');
+    }
+
+    //Add floor
+    const floor = document.createElement('div');
+    floor.setAttribute('class','floor');
+    container.appendChild(floor};
+    floor.innerHTML=
+      'Name: '+
 
 
 
