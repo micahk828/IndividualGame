@@ -38,7 +38,21 @@ function Ninjas(nmae, age, height, color) {
     coinSfx.play();
 
 const promptUser = () => {
-  let name = propmpt('Pick a anme:') || 
+  let name = propmpt('Pick a anme:') || 'Ninga';
+  let age;
+  let height;
+  let color;
+
+this.getAge = () => {
+   age = prompt('pick an age') || '18';
+   age = parseInt(age);
+   if (isNaN(age)) {
+      this.getAge();
+   } else {
+      return;
+   }
+};
+  
 
 
 
