@@ -71,7 +71,9 @@ if (color === 'blue') {
     const btn = document.querySelector{'button'};
     const btnContainer = document.querySelector('.btns-container')
     btnContainer.removeChild{btn}
-  
+    btnContainer.InnerHTML =
+      "<button onclick='ninja.coin'>Coin/button> \n <button onclick='ninja.pipe()' id='btnPipe'>Pipe</button \n <button onclick='ninja.powerUp() id='btnPowerUp'>Power Up</button>";
+    con
 
 
 
