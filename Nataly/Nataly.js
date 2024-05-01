@@ -27,7 +27,7 @@ function Sfx(src) {
   };
 }
 
-function Ninjas(nmae, age, height, color) {
+function Ninjas(name, age, height, color) {
   this.name = name;
   this.age = age;
   this.height = height;
