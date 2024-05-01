@@ -49,3 +49,51 @@ function Ninjas(name,age,height,color){
     coinImg.setAttribute('id','coin-img');
     coinImg.style.transform = 'tanslate(-50%,calc (-100%-'+ninja.height + 'px)';
     container.appendChild(coinImg);
+
+    $(´#coin-img´).animate ({top: ´60´, opacity: 1}, 250);
+    $(´#coin-img´).animate ({top: ´70´, opacity: 1}, 250, ()=> {
+      $(´#coin-img´).remove();
+      button.style.setProperty(´background-color´, ´transparent´);
+      button.style.setProperty(´border-color´, ´var(--accent-color)´);
+      button.style.setProperty(´color´, ´var(--accent-color´);
+    });
+  };
+  this.pipe = () => {
+    pipeSfx.play();
+  };
+  this.powerUp = () => {
+    powerUpSfx.play ();
+  };
+}
+const prompyUser= () => {
+  let name =prompt (´pick a name:´) || ´Ninja´;
+  let age;
+  let height;
+  let color;
+
+  this.getAge= () => {
+    age= prompt (´pick a name:´) || ´18´;
+    age= parseInt(age);
+    if(isNaN(age)) {
+      this.getAge();
+    }else{
+      return;
+    }
+  };
+  this.getHeight=() => {
+    height= prompt (´Pick height: 1,2,3,4´) || 4;
+    height= parseInt(height);
+    if (height===1 || height === 2 || height === 3 ||height === 4) {
+      height=height * 64;
+      return;
+    }else{
+      this.getHeight();
+  }
+  };
+  this.getColor = ()=> {
+    color=prompt (´Choose color: Red Blue Green´) ||´red´;
+    color = color.toLowerCase();
+      }
+};
+
+
