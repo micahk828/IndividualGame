@@ -121,7 +121,10 @@ this.changeBtns= () => {
   for(let i=0;i<newb\Btns.lenght; i++){
     newBtns[i].style.setproperty(´margin-left´, ´1.5erm´);
   }
-  const floor =document.create
+  const floor =document.createElement('div');
+  floor.setAttribute('class','floor');
+  container.appendChild(floor);
+  floor.innerHTML=
                                     
 
     
