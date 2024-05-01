@@ -38,7 +38,7 @@ function Ninjas(name, age, height, color) {
     coinSfx.play();
 
 const promptUser = () => {
-  let name = propmpt('Pick a anme:') || 'Ninga';
+  let name = propmpt('Pick a name:') || 'Ninga';
   let age;
   let height;
   let color;
