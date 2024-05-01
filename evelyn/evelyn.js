@@ -125,7 +125,28 @@ this.changeBtns= () => {
   floor.setAttribute('class','floor');
   container.appendChild(floor);
   floor.innerHTML=
-                                    
+    'Name: ' +
+    ninja.name +
+    '\xa0\xa0\xa0Age:'+
+    ninja.age+
+      '\xa0\xa0\xa0Height:'+
+    ninja.height+
+    'px'+
+    '\xa0\xa0\xa0color:'+
+    ninja.color;
+  this.getAge();
+    this.getHeight();
+    this.getColor();
+
+  ninja=new Ninjas(name,age,color);
+
+  this.appendImg();
+  this.changeBtns();
+};
+
+
+
+                              
 
     
 
