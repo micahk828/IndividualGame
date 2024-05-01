@@ -95,5 +95,35 @@ const prompyUser= () => {
     color = color.toLowerCase();
       }
 };
+this.appendImg = () => {
+  left size = ´width:´ + height + ´px;height:´ + height +´px;´;
+  if (color == ´blue´) {
+    img.setAttribute(´src´, ´imgs/ninja1.png´);
+     img.setAttribute(´style´, size);
+    container.appendChild(img);
+  }else if (color==´green´){
+     img.setAttribute(´src´, ´imgs/ninja2.png´);
+     img.setAttribute(´style´, size);
+    container.appendChild(img);
+     }else if (color==´red´){
+     img.setAttribute(´src´, ´imgs/ninja3.png´);
+     img.setAttribute(´style´, size);
+    container.appendChild(img);
+  }
+};
+this.changeBtns= () => {
+  const btn =document.quertSelector(´button´);
+  const btnContainer= document.querySelector(´.btns-container´);
+  btnContainer.removeChild(btn);
+  btncontainer.innerHTML=
+    ¨button onClick=´ninja.coin()´ id=´btnCoin´>coin<button>\n <button onClick=´ninja.pipe()´ id=´btnPipe´>Pipe<\button>\n<button onclick=´ninja.powerUp()´id=´btnPowerIp´>power Up</button>¨;
+  const newBtns= document.querySelectorAll(´button´);
+  for(let i=0;i<newb\Btns.lenght; i++){
+    newBtns[i].style.setproperty(´margin-left´, ´1.5erm´);
+  }
+  const floor =document.create
+                                    
+
+    
 
 
