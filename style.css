@@ -1,0 +1,82 @@
+body{
+  background-image: url("back.png");
+  background-position:top; 
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.banner{
+  margin: 15px;
+  padding: 10px;
+  border: 3px solid blanchedalmond;
+  box-shadow: 3px 3px 3px 3px #f4f1ec;
+  outline-offset: 1px;
+  outline: groove 2px wheat;;
+  text-transform: capitalize;
+  text-shadow: 2px 1px brown;
+  font-style: oblique;
+  text-align: right;
+  font-family: "Bubblegum Sans", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+  color: sandybrown;
+  line-height: 1rem;
+}
+
+.menu{
+  margin: 10px;
+  padding: 10px;
+  overflow: hidden;
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  font-size: 2em;
+  text-align: left;
+  z-index: 1;
+  line-height: 1.5rem;
+}
+
+.menu a{
+  background-color: blanchedalmond;
+  color: sandybrown;
+  padding: 2px;
+  font-size: 1.5rem;
+  display: none;
+}
+
+.menu:hover a{
+  display: block;
+}
+
+.menu a:hover{
+  background-color: whitesmoke;
+}
+
+#container{
+  border: 3px solid wheat;
+  margin: 1rem;
+  padding: 1rem 1rem;
+  text-align: center;
+  display:flex;
+}
+
+#slides{
+  border: 3px solid blanchedalmond;
+  width: 49.5%;
+  vertical-align: left;
+  display: inline-block;
+  padding: 1rem 1rem;
+}
+#game{
+  border: 3px solid blanchedalmond;
+  width: 49.5%;
+  vertical-align: right;
+  display: inline-block;
+  padding: 1rem 1rem;
+}
+
+.emoticon:hover{
+  border: 3px solid blanchedalmond;
+  width: 98%;
+  padding: 1rem 1rem;
+}
+
