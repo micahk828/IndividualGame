@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>JavaScript Basic</title>
+<link href='https://fonts.googleapis.com/css?family=Bagel Fat One' rel='stylesheet'>
+<style>
+body {
+    font-family: 'Bagel Fat One';font-size: 22px;
+}
+body{
+    background-color:#ecdfe8;
+}
+#animate{
+background-color:yellow;
+width:50px;
+height:50px;
+position:absolute;
+}
+#contanier{
+background-color:green;
+width:300px;
+height:300px;
+position:relative;
+}
+div{
+width:100px;
+height:100px;
+background-color:red;" 
+}
+</style>
+</head>
+</body>
+
+<h1>JavaScript Output Below</h1>
+<button type="button" onclick="addition()">
+Add 6+5</button>
+<button type = "button" onclick="subtraction()">
+Subtract 6-5</button>
+<button type = "button" onclick="multiplication()">
+Multiply 6(5)</button>
+<button type = "button" onclick="division()">
+Divide 6/5</button>
+<button type ="button" onclick="helloworld()">
+Greet</button>
+<p id="demo">This will change with javascript</p>
+<div onmousemove="moveFunk(event)" onmouseout="clearColor()"></div>
+<hr>
+<button type="button" onclick="moveIt">moveIt</button>
+<div id="contanier">
+<div id="animate"></div>
+<button type="button" onclick="moveIt">movItback</button>
+</div>
+<script>
+function moveIt(){
+let id= null
+const elem = document.getElementById ("animate")
+let pos=0
+clearInterval(id)
+id= setInterval(frame,5)
+function frame(){
+  if (pos == 250) {
+  clearInterval(id)
+   }
+else{
+  pos++
+  elem.style.top = pos +"px"
+  elem.style.left = pos + "px"
+  }
+ }
+}
+function addition(){
+document.getElementById("demo").innerHTML=6+5
+}
+function subtraction(){
+document.getElementById("demo").innerHTML=6-5
+}
+function multiplication(){
+document.getElementById("demo").innerHTML=6*5
+}
+function division(){
+document.getElementById("demo").innerHTML=6/5
+}
+function helloworld(){
+document.getElementById("demo").innerHTML="Hello World"
+}
+function moveFunk(e){
+let x = e.clientX
+let y = e.clientY
+let coor ="Coordinates: (" +x+ "," +y+ ")"
+document.getElementById("demo").innerHTML = coor
+}
+</script>
+
+</body>
+</html>
