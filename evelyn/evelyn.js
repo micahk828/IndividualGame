@@ -50,8 +50,8 @@ function Ninjas(name,age,height,color){
     coinImg.style.transform = 'tanslate(-50%,calc (-100%-'+ninja.height + 'px)';
     container.appendChild(coinImg);
 
-    $(´#coin-img´).animate ({top: ´60´, opacity: 1}, 250);
-    $(´#coin-img´).animate ({top: ´70´, opacity: 1}, 250, ()=> {
+    $(´#coin-imgs´).animate ({top: ´60´, opacity: 1}, 250);
+    $(´#coin-imgs´).animate ({top: ´70´, opacity: 1}, 250, ()=> {
       $(´#coin-img´).remove();
       button.style.setProperty(´background-color´, ´transparent´);
       button.style.setProperty(´border-color´, ´var(--accent-color)´);
