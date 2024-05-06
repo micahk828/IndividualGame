@@ -69,6 +69,24 @@ else{
   }
  }
 }
+    }
+
+
+function moveBack(){
+let id = null
+const elem = document.getElementById("animate")
+let pos = 250
+clearInterval(id)
+id = setInterval(frame,5)
+function frame(){
+if (pos == 0){
+clearInterval(id)}
+else{
+pos--
+elem.style.top = pos+"px"
+elem.style.left = pos+"px"
+}}
+}
 function addition(){
 document.getElementById("demo").innerHTML=6+5
 }
