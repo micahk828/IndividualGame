@@ -3,6 +3,11 @@
   <head>
   <title> JavaScript Basic</title>
 <syle>
+  div{
+  background-color:red;
+  width:100px;
+  height:100px;
+  }
 #animate{
   background-color:yellow;
   width:50px;
@@ -22,23 +27,39 @@
 <h1>JavaScript Output Below</h1>
 <button type="button" onclick="addition()">
 Add 6+5 </button>
-<button type="button" onclick="subtraction()">
+<button type="button" onclick="minus()">
 Add 6-5 </button>
-<button type="button" onclick="multiplication()">
+<button type="button" onclick="multi()">
 Add 6*5 </button>
-<button type="button" onclick="division()">
+<button type="button" onclick="divi()">
 Add 6/5 </button>
-
+<button type="button" onclick="greet()">
+Greet </button>
 <p id="demo">This will change with JavaScript</p>
 
-<div style="width:100px;height:100px;background-color:red;" onmousemove="moveFunk(event)" onmouseout="clearColor()" ></div>
+<div onmousemove="moveFunk(event)" onmouseout="clearColor()"></div>
 
-<button type="button" onclick="moveIt</button>
+<button type="button" onclick="moveIt()">moveIt</button>
+<button type="button" onclick="moveItback()">moveIt back</button>
 <div id="container">
-<div id="animate"></div>
+        <div id="animate"></div>
 </div>
 
-<script>
+<script
+function moveFunk(e){
+              let x = e.clientX
+              let y = e.clientY
+              let coor ="Coordinates: (" +x+ "," +y+ ")"
+              document.getElementById("demo").innerHTML=" "
+  }
+function clearCoor(){
+        document.getElementById("demo").innerHTML=" "
+  }
+
+  function addition(){
+    document.getElementById("demo").innerHTML=6+5
+  }
+  
 functionmoveIt(){
   let id = null
   const elem =document.getElementById("animate")
