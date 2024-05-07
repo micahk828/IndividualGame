@@ -69,6 +69,7 @@ body{
 #game{
   border: 3px solid blanchedalmond;
   width: 49.5%;
+  min-height: 640px;
   vertical-align: right;
   display: inline-block;
   padding: 1rem 1rem;
