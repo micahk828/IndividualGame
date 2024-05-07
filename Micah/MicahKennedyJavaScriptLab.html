@@ -5,9 +5,10 @@
 <style>
 body{
 background-color: lightblue;
+
 		}
 
-		h1, p{
+		h1, p, h2{
 		color: white;
 		font-family: Comic Sans MS, cursive;
 		}
@@ -18,8 +19,26 @@ background-color: lightblue;
 		border: lightblue 2px solid;
 		font-family: Luminari, fantasy;
 		border-radius: 15px;
+    font-size: 20px;
 		}
-		
+    #heading{
+     margin: 0 auto;
+     border: 1px solid white;
+     margin: 0 auto;
+     height: 55%;
+     width: 75%;
+     background-color: mediumorchid;
+     border-radius: 20px;
+    }
+  #bottom{
+   margin: 0 auto;
+   border: 1px solid white;
+  align-items: center;
+   height: 55%;
+   width: 75%;
+   background-color: mediumorchid;
+   border-radius: 20px;
+  }
 		div{
 		border-radius: 15px;
 		}
@@ -40,8 +59,8 @@ background-color: lightblue;
 
 </style>
 </head>
-<body>
-
+<body><center>
+<div id="heading">
 <h1>JavaScript Output Below</h1>
 <button type="button" onclick="addition()">
 Add 6+5</button>
@@ -54,6 +73,18 @@ Divide 6/5</button>
 <button type ="button" onclick="helloworld()">
 Greet</button>
 <p id="demo">This will change with JavaScript</p>
+  <div style="width:100px;height:100px;background-color:blue;" onmousemove="moveFunk(event)" onmouseout="clearCoor()" ></div><br></div><br>
+<div id="bottom">
+  <h2>Movement Animation</h2>
+  <button type="button" onclick="moveToBottomRight()">Move to Bottom Right</button>
+      <button type="button" onclick="moveToTopLeft()">Move to Top Left</button>
+      <button type="button" onclick="moveToTopRight()">Move to Top Right</button>
+      <button type="button" onclick="moveToBottomLeft()">Move to Bottom Left</button>
+  <br><br>
+      <div id="container">
+        <div id="animate"></div>
+      </div><br>
+  </div>
 <script>
 function addition(){
 document.getElementById("demo").innerHTML=6+5
@@ -79,28 +110,29 @@ document.getElementById("demo").innerHTML = coor
 function clearCoor(){
 document.getElementById("demo").innerHTML= " "
 }
-function moveToBottomRight(){
-			let id = null
-			const elem = document.getElementById("animate");
-			let pos = 0
-			clearInterval(id)
-			id=setInterval(frame,5)
-			function frame(){
-				if (pos == 350){
-				clearInterval(id)
-					}
-					else{
-					pos++
-					elem.style.top = pos+"px"
-					elem.style.left = pos+"px"
-					}
-				}
-			}
+  function moveToBottomRight() {
+   let id = null
+   const elem = document.getElementById("animate")
+   let pos = 0
+   clearInterval(id)
+   id = setInterval(frame, 5)
+
+     function frame(){
+      if(pos == 250) {
+        clearInterval(id)
+      } else {
+        pos++
+        elem.style.top = pos + "px"
+        elem.style.left = pos + "px"
+      }
+    }
+
+  }
 
 			function moveToTopLeft(){
 			let id = null
 			const elem = document.getElementById("animate");
-			let pos = 350
+			let pos = 250
 			clearInterval(id)
 			id=setInterval(frame,5)
 			function frame(){
@@ -122,7 +154,7 @@ function moveToBottomRight(){
 			clearInterval(id)
 			id=setInterval(frame,5)
 			function frame(){
-				if (pos == 350){
+				if (pos == 250){
 				clearInterval(id)
 					}
 					else{
@@ -136,7 +168,7 @@ function moveToBottomRight(){
 			function moveToBottomLeft(){
 			let id = null
 			const elem = document.getElementById("animate");
-			let pos = 350
+			let pos = 250
 			clearInterval(id)
 			id=setInterval(frame,5)
 			function frame(){
@@ -145,38 +177,12 @@ function moveToBottomRight(){
 					}
 					else{
 					pos--
-					elem.style.top = pos+"px"
-					elem.style.right= pos+"px"
+					elem.style.bottom = pos+"px"
+					elem.style.left= pos+"px"
 					}
 				}
 			}
 
 </script>
-<div style="width:100px;height:100px;background-color:blue;" onmousemove="moveFunk(event)" onmouseout="clearCoor()" ></div><br>
-<button type="button" onclick="moveToBottomRight()">Move to Bottom Right</button>
- 
-		<br>
-		<br>
-
-		<button type="button" onclick="moveToTopLeft()">Move to Top Left</button>
-
-		<br>
-		<br>
-
-		<button type="button" onclick="moveToTopRight()">Move to Top Right</button>
-
-		<br>
-		<br>
-
-		<button type="button" onclick="moveToBottomLeft()">Move to Bottom Left</button>
-
-		<br>
-		<br>
-
-
-		<div id="container">
-			<div id="animate"></div>
-		</div>
-
-</body>
+</center></body>
 </html>
