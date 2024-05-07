@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>JavaScript Basic</title>
+<style>
+body{
+background-color: lightblue;
+		}
+
+		h1, p{
+		color: white;
+		font-family: Comic Sans MS, cursive;
+		}
+
+		button{
+		background-color: orange;
+		color: white;
+		border: lightblue 2px solid;
+		font-family: Luminari, fantasy;
+		border-radius: 15px;
+		}
+		
+		div{
+		border-radius: 15px;
+		}
+
+		#animate{
+		background-color: purple;
+		width: 50px;
+		height: 50px;
+		position: absolute;
+		}
+
+		#container{
+		background-color: pink; 
+		width: 300px;
+		height: 300px;
+		position: relative;
+		}
+
+</style>
+</head>
+<body>
+
+<h1>JavaScript Output Below</h1>
+<button type="button" onclick="addition()">
+Add 6+5</button>
+<button type = "button" onclick="subtraction()">
+Subtract 6-5</button>
+<button type = "button" onclick="multiplication()">
+Multiply 6(5)</button>
+<button type = "button" onclick="division()">
+Divide 6/5</button>
+<button type ="button" onclick="helloworld()">
+Greet</button>
+<p id="demo">This will change with JavaScript</p>
+<script>
+function addition(){
+document.getElementById("demo").innerHTML=6+5
+}
+function subtraction(){
+document.getElementById("demo").innerHTML=6-5
+}
+function multiplication(){
+document.getElementById("demo").innerHTML=6*5
+}
+function division(){
+document.getElementById("demo").innerHTML=6/5
+}
+function helloworld(){
+document.getElementById("demo").innerHTML="Hello World"
+}
+function moveFunk(e){
+let x = e.clientX
+let y = e.clientY
+let coor ="Coordinates: (" +x+ "," +y+ ")"
+document.getElementById("demo").innerHTML = coor
+}
+function clearCoor(){
+document.getElementById("demo").innerHTML= " "
+}
+function moveToBottomRight(){
+			let id = null
+			const elem = document.getElementById("animate");
+			let pos = 0
+			clearInterval(id)
+			id=setInterval(frame,5)
+			function frame(){
+				if (pos == 350){
+				clearInterval(id)
+					}
+					else{
+					pos++
+					elem.style.top = pos+"px"
+					elem.style.left = pos+"px"
+					}
+				}
+			}
+
+			function moveToTopLeft(){
+			let id = null
+			const elem = document.getElementById("animate");
+			let pos = 350
+			clearInterval(id)
+			id=setInterval(frame,5)
+			function frame(){
+				if (pos == 0){
+				clearInterval(id)
+					}
+					else{
+					pos--
+					elem.style.top = pos+"px"
+					elem.style.left = pos+"px"
+					}
+				}
+			}
+
+			function moveToTopRight(){
+			let id = null
+			const elem = document.getElementById("animate");
+			let pos = 0
+			clearInterval(id)
+			id=setInterval(frame,5)
+			function frame(){
+				if (pos == 350){
+				clearInterval(id)
+					}
+					else{
+					pos++
+					elem.style.bottom = pos+"px"
+					elem.style.left = pos+"px"
+					}
+				}
+			}
+
+			function moveToBottomLeft(){
+			let id = null
+			const elem = document.getElementById("animate");
+			let pos = 350
+			clearInterval(id)
+			id=setInterval(frame,5)
+			function frame(){
+				if (pos == 0){
+				clearInterval(id)
+					}
+					else{
+					pos--
+					elem.style.top = pos+"px"
+					elem.style.right= pos+"px"
+					}
+				}
+			}
+
+</script>
+<div style="width:100px;height:100px;background-color:blue;" onmousemove="moveFunk(event)" onmouseout="clearCoor()" ></div><br>
+<button type="button" onclick="moveToBottomRight()">Move to Bottom Right</button>
+ 
+		<br>
+		<br>
+
+		<button type="button" onclick="moveToTopLeft()">Move to Top Left</button>
+
+		<br>
+		<br>
+
+		<button type="button" onclick="moveToTopRight()">Move to Top Right</button>
+
+		<br>
+		<br>
+
+		<button type="button" onclick="moveToBottomLeft()">Move to Bottom Left</button>
+
+		<br>
+		<br>
+
+
+		<div id="container">
+			<div id="animate"></div>
+		</div>
+
+</body>
+</html>
