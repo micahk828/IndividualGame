@@ -12,13 +12,13 @@ body{
   outline-offset: 1px;
   outline: groove 2px wheat;;
   text-transform: capitalize;
-  text-shadow: 2px 1px brown;
+  text-shadow: 2px 1px blue;
   font-style: oblique;
   text-align: right;
   font-family: "Poetsen One", sans-serif;
   font-weight: 100;
   font-style: normal;
-  color: sandybrown;
+  color: aquamarine;
   line-height: 1rem;
 }
 
